@@ -39,7 +39,7 @@ checks = {
                           ' you are using version ' + process.versions.node + '\033[0m\n');
             console.error('\x1B[32mPlease see http://support.ghost.org/supported-node-versions/ for more information\033[0m');
 
-            process.exit(exitCodes.NODE_VERSION_UNSUPPORTED);
+            // process.exit(exitCodes.NODE_VERSION_UNSUPPORTED);
         }
     },
 

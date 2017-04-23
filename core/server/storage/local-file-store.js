@@ -26,9 +26,11 @@ util.inherits(LocalFileStore, BaseStore);
 LocalFileStore.prototype.save = function (image, targetDir) {
     targetDir = targetDir || this.getTargetDir(config.paths.imagesPath);
     var targetFilename;
-
     return this.getUniqueFileName(this, image, targetDir).then(function (filename) {
         targetFilename = filename;
+        console.log(targetDir)
+        console.log(targetFilename)
+
         return Promise.promisify(fs.mkdirs)(targetDir);
     }).then(function () {
         return Promise.promisify(fs.copy)(image.path, targetFilename);
@@ -37,7 +39,7 @@ LocalFileStore.prototype.save = function (image, targetDir) {
         // For local file system storage can use relative path so add a slash
         var fullUrl = (config.paths.subdir + '/' + config.paths.imagesRelPath + '/' +
         path.relative(config.paths.imagesPath, targetFilename)).replace(new RegExp('\\' + path.sep, 'g'), '/');
-        return fullUrl;
+        return 'https://cdn.hao-zi.com' + fullUrl;
     }).catch(function (e) {
         errors.logError(e);
         return Promise.reject(e);
