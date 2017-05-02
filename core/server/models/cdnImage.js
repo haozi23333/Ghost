@@ -13,7 +13,8 @@ module.exports = function () {
                         if (src.indexOf(".pdf") === src.length-4){
                             return '<object data="' + src + '" type="application/pdf" width="100%" height="100%">' + alt + '</object>';
                         }
-                        return '<img src="' + src + config.cdn.imageParam + '" alt="' + alt + '" />';
+
+                        return '<img src="' + src.replace(/\?.*/, "") + config.cdn.imageParam + '" alt="' + alt + '" />';
                     }
                     return '';
                 });
