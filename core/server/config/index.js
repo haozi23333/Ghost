@@ -202,6 +202,11 @@ ConfigManager.prototype.set = function (config) {
         schedulingPath = path.join(contentPath, '/scheduling/');
     }
 
+    // if(config && config.cdn){
+    //     console.log('woc you cdn')
+    //     this._config.cdn = config.cdn;
+    // }
+
     _.merge(this._config, {
         ghostVersion: packageInfo.version,
         paths: {
@@ -289,6 +294,7 @@ ConfigManager.prototype.set = function (config) {
             publishAPostBySchedulerToleranceInMinutes: 2
         }
     });
+
 
     // Also pass config object to
     // configUrl object to maintain

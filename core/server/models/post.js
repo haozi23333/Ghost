@@ -6,7 +6,7 @@ var _              = require('lodash'),
     sequence       = require('../utils/sequence'),
     errors         = require('../errors'),
     Showdown       = require('showdown-ghost'),
-    converter      = new Showdown.converter({extensions: ['ghostgfm', 'footnotes', 'highlight']}),
+    converter      = new Showdown.converter({extensions: [require('./cdnImage') ,'ghostgfm', 'footnotes', 'highlight']}),
     ghostBookshelf = require('./base'),
     events         = require('../events'),
     config         = require('../config'),
@@ -14,6 +14,7 @@ var _              = require('lodash'),
     i18n           = require('../i18n'),
     Post,
     Posts;
+
 
 Post = ghostBookshelf.Model.extend({
 

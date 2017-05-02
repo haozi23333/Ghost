@@ -39,7 +39,7 @@ LocalFileStore.prototype.save = function (image, targetDir) {
         // For local file system storage can use relative path so add a slash
         var fullUrl = (config.paths.subdir + '/' + config.paths.imagesRelPath + '/' +
         path.relative(config.paths.imagesPath, targetFilename)).replace(new RegExp('\\' + path.sep, 'g'), '/');
-        return 'https://cdn.hao-zi.com' + fullUrl;
+        return config.cdn.url + fullUrl;
     }).catch(function (e) {
         errors.logError(e);
         return Promise.reject(e);

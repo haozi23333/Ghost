@@ -24,6 +24,10 @@ config = {
         server: {
             host: '127.0.0.1',
             port: '2368'
+        },
+        cdn: {
+            url: "https://cdn.hao-zi.com",
+            imageParam: "?imageView2/1/w/800/h/600/interlace/1/q/100|watermark/2/text/QGhhb3pp/font/Y29uc29sYXM=/fontsize/500/fill/I0E3QTdBNw==/dissolve/100/gravity/SouthEast/dx/10/dy/10|imageslim"
         }
     },
 
