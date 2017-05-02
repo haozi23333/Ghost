@@ -27,9 +27,9 @@ module.exports = function () {
              * @param text
              */
             filter: function (text) {
-                var checkBoxRegex = /(?:\n|\s{2,})\-\s\[(X?)\]\s(.+)/igm
+                var checkBoxRegex = /(?:\n|\s{2,})\-\s\[(X?|\s)\]\s(.+)/igm
                 return text.replace(checkBoxRegex, function(str, isCheck, value, index){
-                    return "<input disabled value='" + value +"' type='checkbox' " + (isCheck ? "checked" : "") + "/>"
+                    return "\n - <p><input disabled type='checkbox' " + (isCheck.toLowerCase() == "x" ? "checked" : "") + "/>" + value + "</p>"
                 })
             }
         }
