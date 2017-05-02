@@ -1,3 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
 config.js
-content
+#content
+content/images
+content/data
+content/themes/ghost-theme-kaldorei

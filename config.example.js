@@ -28,7 +28,7 @@ config = {
         cdn: {
             url: 'https://cdn.hao-zi.com',
             defaultImageParam: '?imageView2/0/q/100|imageslim',
-            imageParam: '?imageView2/1/w/800/h/600/interlace/1/q/100|watermark/2/text/QGhhb3pp/font/Y29uc29sYXM=/fontsize/500/fill/I0E3QTdBNw==/dissolve/100/gravity/SouthEast/dx/10/dy/10|imageslim'
+            imageParam: '?imageView2/1/w/800/h/600/interlace/1/q/100|watermark/2/text/QGhhb3pp/font/Y29uc29sYXM=/fontsize/500/fill/I0E3QTdBNw%3d%3d/dissolve/100/gravity/SouthEast/dx/10/dy/10|imageslim'
         }
     },
 
