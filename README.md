@@ -15,7 +15,8 @@ todo list:
 
  - [X] [点击图片显示大图](https://haozi.moe/11/)
  - [X] [table的滋瓷](https://haozi.moe/13/)
- - [ ] [图片做CDN存储]()
+ - [X] [图片做CDN存储](https://hao-zi.com/16/)
+ - [ ] [github快速分享  类似![]() ]()
 # 注意事项
 我禁用了ghost的Node版本检查 我开发用的是 `7.9.0`  
 Ghost supports LTS Node versions: `^4.2.0 || ^6.9.0`    
